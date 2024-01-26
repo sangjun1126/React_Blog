@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Header from "./Layout/Header";
 import Navigation from "./Layout/Navigation";
+import { Router } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -9,6 +10,9 @@ class App extends Component {
       <Layout>
         <Header />
         <Navigation />
+        <Content>
+          <Router />
+        </Content>
       </Layout>
     );
   }

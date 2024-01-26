@@ -42,7 +42,9 @@ const Element = styled.div`
 const ShortCut = styled.div`
   order: 1;
   width: 100%;
-  height: 80px;
+  height: 20px;
+  text-align: right;
+  background-color: #a8ff78;
 `;
 
 const Logo = styled.div`
