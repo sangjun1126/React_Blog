@@ -1,12 +1,25 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
+    const { logged, onLogout } = this.props;
+
     return (
       <Container>
         <Element>
-          <ShortCut>로그인/회원가입</ShortCut>
+          {logged ? (
+            <ShortCut>
+              <Link to="/" onClick={onLogout}>
+                로그아웃
+              </Link>
+            </ShortCut>
+          ) : (
+            <ShortCut>
+              <Link to="/login">로그인 / 회원가입</Link>
+            </ShortCut>
+          )}
           <Logo>
             <img
               width="100%"
@@ -16,14 +29,15 @@ class Header extends Component {
             />
           </Logo>
           <Search>
-            <h1>React Blog</h1>
+            <Link to="/" style={{ textDecoration: "none", color: "#274046" }}>
+              <h1>리액트 블로그</h1>
+            </Link>
           </Search>
         </Element>
       </Container>
     );
   }
 }
-
 export default Header;
 
 const Container = styled.div`

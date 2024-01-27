@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 class Navigation extends Component {
@@ -6,12 +7,18 @@ class Navigation extends Component {
     return (
       <Nav>
         <NavList>
-          <NavItem>소개</NavItem>
-          <NavItem>게시판</NavItem>
-          <NavItem>연락</NavItem>
-          <NavItem>메뉴1</NavItem>
-          <NavItem>메뉴2</NavItem>
-          <NavItem>메뉴3</NavItem>
+          <NavItem>
+            <Link to="/about">소개</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/board">게시판</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/myboard">내 글보기</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/mypage">마이페이지</Link>
+          </NavItem>
         </NavList>
       </Nav>
     );
