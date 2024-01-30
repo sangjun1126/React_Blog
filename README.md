@@ -155,3 +155,19 @@ export default withLogin;
 * mongoDB의 mial같은 경우는 버전이 현재 지원하지 않기에 다른 방안을 찾아보는 것이 최선이라 생각합니다.
 * React는 SFC && Class Component의 비교 및 구 버전의 lifecycle을 이해하기 위해 둘 다 작성이 되었습니다. 이를 SFC component로 리팩토링 할 예정입니다
 * API는 현재 날씨만 연동 완료한 상태이며, 로그인의 구글과 카카오 API는 내일 업데이트 커밋할 예정입니다.
+
+
+### 1/30
+
+#### 현재 상황
+* 패키지 의존성이 모두 충돌이 발생했습니다.(38 error)
+* force 명령어도 다른 명령어도 동작 에러가 발생하기에, 잠시 디버깅을 중단했습니다.
+
+#### 해결하기 위해 사용한 방식
+
+* 패키지에 ^ 표시를 붙여 이하 버전도 설치 가능하게 바꿨습니다.
+<img width="282" alt="image" src="https://github.com/sangjun1126/React_Blog/assets/142310079/66706800-7098-4c3d-918e-c29addaba191">
+
+* npm ls 명령어를 이용해서 구조를 찾아보는 과정을 실행했습니다.
+
+
